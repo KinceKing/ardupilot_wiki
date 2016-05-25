@@ -1,74 +1,48 @@
 .. _ac2_followme:
 
 ============================
-Follow Me Mode (GSC Enabled)
+跟随模式 (GSC 启用)
 ============================
 
-Follow Me mode makes it possible for you to have your copter follow you
-as you move, using a telemetry radio and a ground station.
+使用遥测无线电和地面卫星接收站，引导模式可以使直升机在你移动的时候跟随你移动成为可能。
 
-.. note::
+.. 注意事项::
 
-   Unlike "proper" autopilot modes, this feature is implemented in
-   the Ground Station. The ground station controls the movement by reading
-   the vehicle position using MAVLink Telemetry and sending GUIDED mode
-   instructions to move the vehicle appropriately. Currently this sort of
-   functionality is supported by *Mission Planner* for Windows laptops, APM
-   Planner for OS X laptops, and DroidPlanner for Android devices.
+   不同于"固有的"无人驾驶模式，这项功能的实现是在地面卫星接收站。地面卫星接收站通过微型飞行器链接遥测技术读取无人机位置来控制其运动并发送导引模式指令来恰当地移动无人机。目前这种功能由Windows笔记本的电脑任务规划器、OS X笔记本电脑的APM规划器和Android设备的机器人规划器来支持。  
 
-What you'll need
+所需材料
 ================
 
-#. An Copter with telemetry
-#. A laptop
-#. A GPS USB dongle `like this <http://www.amazon.com/ND-100S-GlobalSat-USB-GPS-Receiver/dp/B004K39QTY/refsr_1_9?ieUTF8&qid1329773762&sr=8-9>`__
-   or Bluetooth GPS module `like this <http://www.amazon.com/GlobalSat-BT-368i-Bluetooth-GPS-Receiver/dp/B0018YZ836/refsr_1_2?selectronics&ieUTF8&qid1329773963&sr1-2>`__.
+#. 一台带遥测的直升机
+#. 一台笔记本电脑
+#. 一个GPS USB适配器 `类似这种 <http://www.amazon.com/ND-100S-GlobalSat-USB-GPS-Receiver/dp/B004K39QTY/refsr_1_9?ieUTF8&qid1329773762&sr=8-9>`__
+   或者一个蓝牙GPS组件 `类似这种 <http://www.amazon.com/GlobalSat-BT-368i-Bluetooth-GPS-Receiver/dp/B0018YZ836/refsr_1_2?selectronics&ieUTF8&qid1329773963&sr1-2>`__.
 
-Instructions for Mission Planner
+任务规划器
 ================================
 
-#. Set one of your flight modes to "Loiter"
-#. Set up your Copter at the field and establish a MAVLink connection
-   over wireless telemetry
-#. Ensure that your GPS USB dongle or Bluetooth device is plugged into
-   to your laptop and showing up as a serial port. Using the software
-   that came with the module, make sure that it's working and that you
-   have GPS lock.
-#. Take off, and once in the air switch to Loiter. (Sufficient altitude
-   to ensure that while it is following you it isn't attacking you might
-   be a good idea).
-#. In the Mission Planner Flight Data screen try right-clicking on a
-   nearby spot and select "Fly to Here". If this works, you're ready to
-   try Follow Me mode.
-#. In the Mission Planner, enter Control-F, which will open the
-   following window. Click on "Follow Me"
+#. 把飞行模式设为"悬停"。
+#. 在这个域下设置直升机并通过无线遥测建立微型飞行器链接。
+#. 确保你的GPS USB适配器或蓝牙设备插入笔记本电脑并显示串行端口。.使用组件自带的软件，确认它能正常运转并有GPS锁定
+#. 起飞，一旦飞到空中就切换成悬停模式。 (要有足够的高度以确保它是在跟随你并不会攻击到你，这可能是个不错的主意).
+#. 在任务规划飞行数据屏幕上尝试右键点击附近的位置,选择“飞到这里”。如果这个起作用,就可以尝试跟随模式。
+#. 在任务规划中,输入Control-F,打开如下窗口。点击“Follow Me”
 
 .. image:: ../images/followme1.jpg
     :target: ../_images/followme1.jpg
 
--  This will bring up this window. Select the serial port that is
-   assigned to your GPS device and whatever baud rate it uses.
+-  将弹出这个窗口。选择已分配给GPS设备的串行端口，不用管它所使用的波特率。
 
 .. image:: ../images/followme2.png
     :target: ../_images/followme2.png
 
--  Once you click "Connect", the Mission Planner will read the GPS data
-   from your device and send it to your Copter as "fly to here" commands
-   every two seconds.
+-  一旦你点击"Connect", 任务规划将从你的设备中读取GPS数据，每隔两秒向直升机发送 "飞到这里"的指令 。
 
--  Now pick up your laptop and start walking around.
--  The Copter should follow you!
+-  现在拿起你的笔记本，然后开始四处走动。
+-  直升机应该会跟随你！
 
-   -  If you have set the altitude to 5 feet it might be a good idea to
-      see if you can out run it.
-   -  As mentioned before, sufficient altitude to prevent injury is
-      useful.
-   -  Seriously this is a great capability, but safety is really
-      important when using Follow Me mode especially with an open bladed
-      Multicopter.
+   -  如果把高度设置为5英尺的话可能是不错，来看看你是否可以运行它。
+   -  如前所述，足够的高度对于避免受伤是有益的。
+   -  跟随模式是一个很好的功能，但在使用跟随着模式特别是打开螺旋桨的多通道直升机时，一定要注意安全。
 
--  **Warning:** Like all other modes in which the autopilot is
-   responsible for altitude hold (Loiter, AltHold), the barometer is
-   used in the altitude calculation meaning that it can drift over time
-   and the copter will follow the air pressure change rather than actual
-   altitude above ground.
+-  **警告:** 像其它模式也需要无人机高度保持原因一样（悬停、高度保持），气压计用于高度计算，无人机随时间变化发生漂移，无人机的高度会随气压的变化而变化，而不是它离地面的实际高度。
