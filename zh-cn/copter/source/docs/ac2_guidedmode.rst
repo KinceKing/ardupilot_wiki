@@ -4,12 +4,9 @@
 导航模式
 ===========
 
-Guided mode is a capability of Copter to dynamically guide the copter to
-a target location wirelessly using a telemetry radio module and ground
-station application. This page provides instructions for using guided
-mode.
+导航模式是指无人机的一种功能，它使用遥感无线模块和地面站应用程序，无线动态引导无人机到目标位置。本页面提供使用导航模式的指令。
 
-Overview
+概述
 ========
 
 Guided mode is not a traditional flight mode that would be assigned to a
