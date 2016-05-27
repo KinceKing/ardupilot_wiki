@@ -4,7 +4,7 @@
 跟随模式 (GSC 开启)
 ============================
 
-Follow Me mode makes it possible for you to have your copter follow you
+跟随模式Follow Me mode makes it possible for you to have your copter follow you
 as you move, using a telemetry radio and a ground station.
 
 .. note::
